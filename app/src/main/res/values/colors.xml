@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorPrimaryLight">#90CAF9</color>
+    <color name="colorAccent">#64B5F6</color>
+    <color name="colorControlNormal">#1565C0</color>
+    <color name="colorControlActivated">#0D47A1</color>
+    <color name="colorBackground">@color/white</color>
+    <color name="textColorSecondary">@color/colorPrimary</color>
+    <color name="textColorSecondaryDark">@color/colorControlNormal</color>
+    <color name="textColorTertiary">#E64A19</color>
+    <color name="textColorTertiaryDark">#D84315</color>
+    <color name="textColorTertiaryLight">#F67375</color>
+    <color name="navigationBarColor">@color/colorPrimaryDark</color>
+
+    <color name="lineBackground">#707070</color>
+    <color name="popBackground">#D8ECECEC</color>
+    <color name="transBackground">#14000000</color>
+    <color name="windowBackground">#C0C3C6</color>
+    <color name="darkBackground">#424242</color>
+    <color name="cardBackground">#F4F2F2</color>
+    <color name="buttonGreyBackground">#707070</color>
+    <color name="bottomBarBackground">@color/colorPrimaryDark</color>
+    <color name="viewBackground">#AB69FD</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

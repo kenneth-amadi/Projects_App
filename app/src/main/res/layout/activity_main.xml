@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="My Projects"
+                android:textColor="@color/textColorSecondaryDark"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/textColorSecondaryDark"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add"
+                    style="@style/Material.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="7dp"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/textColorSecondary"
+                    app:cornerRadius="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/display"
+                    style="@style/Material.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="7dp"
+                    android:text="Display"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/textColorSecondary"
+                    app:cornerRadius="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/exit"
+                    style="@style/Material.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="7dp"
+                    android:text="Exit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/textColorSecondary"
+                    app:cornerRadius="0dp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/main_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/textColorSecondaryDark"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Project Name:"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="0dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/textColorSecondaryDark"
+                            app:strokeWidth="1dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/project_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/transBackground"
+                                android:fontFamily="sans-serif-condensed"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textColorHint="@color/textColorSecondary"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Start Date:"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="0dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/textColorSecondaryDark"
+                            app:strokeWidth="1dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/start_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/transBackground"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:fontFamily="sans-serif-condensed"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textColorHint="@color/textColorSecondary"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Start Time:"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="0dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/textColorSecondaryDark"
+                            app:strokeWidth="1dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/start_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/transBackground"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:fontFamily="sans-serif-condensed"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textColorHint="@color/textColorSecondary"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="End Date:"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="0dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="1dp"
+                            app:strokeColor="@color/textColorSecondaryDark"
+                            app:strokeWidth="1dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/end_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/transBackground"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:fontFamily="sans-serif-condensed"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textColorHint="@color/textColorSecondary"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="End Time:"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="0dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/textColorSecondaryDark"
+                            app:strokeWidth="1dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/end_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/transBackground"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:fontFamily="sans-serif-condensed"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textColorHint="@color/textColorSecondary"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/save"
+                        style="@style/Material.Button"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="1dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:padding="10dp"
+                        android:text="Add"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:backgroundTint="@color/textColorSecondary"
+                        app:cornerRadius="30dp" />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/display_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#14000000"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/textColorSecondaryDark"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/textColorSecondaryDark"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/name"
+                            style="@style/Material.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="1dp"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="7dp"
+                            android:text="Project Name"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            app:backgroundTint="@color/textColorSecondary"
+                            app:cornerRadius="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/day"
+                            style="@style/Material.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="1dp"
+                            android:layout_weight="0.6"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="7dp"
+                            android:text="Days"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            app:backgroundTint="@color/textColorSecondary"
+                            app:cornerRadius="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/hour"
+                            style="@style/Material.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="1dp"
+                            android:layout_weight="0.6"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="7dp"
+                            android:text="Hour"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            app:backgroundTint="@color/textColorSecondary"
+                            app:cornerRadius="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/minute"
+                            style="@style/Material.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="0dp"
+                            android:layout_weight="0.8"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="7dp"
+                            android:text="Minutes"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            app:backgroundTint="@color/textColorSecondary"
+                            app:cornerRadius="0dp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/textColorSecondaryDark"
+                        tools:itemCount="0"
+                        tools:listitem="@layout/item_main_project_list" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        app:cardBackgroundColor="#14000000"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/textColorSecondaryDark"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:background="@color/textColorSecondaryDark"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/total"
+                                style="@style/Material.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_weight="2"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:padding="7dp"
+                                android:text="Total"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:backgroundTint="@color/white"
+                                app:cornerRadius="0dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/total_day"
+                                style="@style/Material.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_weight="0.6"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:padding="7dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:backgroundTint="@color/white"
+                                app:cornerRadius="0dp"
+                                tools:text="Days" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/total_hour"
+                                style="@style/Material.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_weight="0.6"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:padding="7dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:backgroundTint="@color/white"
+                                app:cornerRadius="0dp"
+                                tools:text="Hour" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/total_minute"
+                                style="@style/Material.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="0dp"
+                                android:layout_weight="0.8"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:padding="7dp"
+                                android:textColor="@color/textColorSecondaryDark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:backgroundTint="@color/white"
+                                app:cornerRadius="0dp"
+                                tools:text="Minutes" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/textColorSecondaryDark" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
